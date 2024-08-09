@@ -5,6 +5,7 @@ import Partnership from "./components/Partnership";
 import Slider from "./components/Slider";
 import Work from "./components/Work";
 import Footer from "./components/Footer";
+import ContactUs from "./components/ContactUs";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <ExploreSection />
       <Work />
       <Partnership />
+      <ContactUs />
       <Footer />
     </div>
   );
