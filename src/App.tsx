@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Partnership from "./components/Partnership";
 import Slider from "./components/Slider";
 import Work from "./components/Work";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <ExploreSection />
       <Work />
       <Partnership />
+      <Footer />
     </div>
   );
 };
