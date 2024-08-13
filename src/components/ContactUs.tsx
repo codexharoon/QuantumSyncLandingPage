@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -7,7 +8,15 @@ const ContactUs = () => {
     email: "",
     company: "",
     message: "",
+    recaptcha: "",
   });
+
+  const handleRecaptchaChange = (value: string | null) => {
+    setFormData({
+      ...formData,
+      recaptcha: value || "", // Update reCAPTCHA value
+    });
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -21,6 +30,20 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic
+    if (formData.recaptcha === "") {
+      alert("Please verify that you're not a robot.");
+      return;
+    } else {
+      alert("Form submitted successfully!");
+      setFormData({
+        firstname: "",
+        lastname: "",
+        email: "",
+        company: "",
+        message: "",
+        recaptcha: "",
+      });
+    }
   };
 
   return (
@@ -110,7 +133,12 @@ const ContactUs = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="mt-6">{/* reCAPTCHA component here */}</div>
+          <div className="mt-6">
+            <ReCAPTCHA
+              sitekey="6Le6yiUqAAAAABWLEP6T9TFJTsD4Z1HeLWULmLwP"
+              onChange={handleRecaptchaChange}
+            />
+          </div>
           <button
             type="submit"
             className="w-full rounded-full bg-blue-500 text-white text-lg py-3 mt-6"
