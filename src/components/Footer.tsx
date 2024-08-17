@@ -121,7 +121,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="lg:w-[44%] mt-10 w-1/2 flex md:flex-row flex-col gap-x-6 ">
+      <div className="text-white font-semibold w-full flex items-center justify-center py-2 mt-8">
         <div className="flex flex-row flex-wrap w-3/4 justify-center gap-x-10 items-center">
           <a
             href="#"
