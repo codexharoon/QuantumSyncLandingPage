@@ -6,7 +6,7 @@ import Slider from "./components/Slider";
 import Work from "./components/Work";
 import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
-import Services from "./components/Sevices";
+import Services from "./components/ServicesNew";
 
 const App = () => {
   return (
