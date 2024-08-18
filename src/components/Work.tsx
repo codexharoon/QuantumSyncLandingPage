@@ -78,18 +78,20 @@ const Work = () => {
         {workData.map((work, i) => (
           <div
             key={i}
-            className="border-2 border-blueWhite group hover:border-blue-200 p-4 flex flex-col justify-between "
+            className="border-2 border-blueWhite group hover:border-blue-700 p-4 flex flex-col justify-between "
           >
             <div className="pb-6">
-              <h1 className="pt-2 font-bold text-lg">{work.heading}</h1>
+              <h1 className="pt-2 font-semibold text-lg sm:text-2xl">
+                {work.heading}
+              </h1>
               <p className="fiveLines pt-2 text-sm">{work.description}</p>
             </div>
 
             <a
               href={work.link}
-              className="group-hover:text-blue-500 w-fit font-semibold text-sm flex flex-row items-center gap-x-2 cursor-pointer"
+              className="group-hover:text-blue-700 w-fit font-semibold text-sm sm:text-base flex flex-row items-center gap-x-2 cursor-pointer"
             >
-              Learn More <span className="text-xl font-bold s">&rarr;</span>
+              Learn More <span className="text-xl font-bold">&rarr;</span>
             </a>
           </div>
         ))}
