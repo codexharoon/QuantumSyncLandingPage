@@ -51,7 +51,7 @@ const data: dataProps[] = [
 
 const Services = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const ref = useRef<any>();
+  const ref = useRef<StackedCarousel>();
 
   const handleSlideChange = (index: number) => {
     setCurrentIndex(index);
@@ -82,7 +82,7 @@ const Services = () => {
                 currentVisibleSlide={currentVisibleSlide}
                 onActiveSlideChange={handleSlideChange}
                 useGrabCursor
-                ref={ref}
+                ref={ref as React.MutableRefObject<StackedCarousel>}
               />
             );
           }}
