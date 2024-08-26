@@ -4,50 +4,8 @@ import {
   ResponsiveContainer,
 } from "react-stacked-center-carousel";
 import "tailwindcss/tailwind.css";
-
-type dataProps = {
-  cover: string;
-  title: string;
-};
-
-const data: dataProps[] = [
-  {
-    cover: "/services/1.webp",
-    title: "Managed Cloud Services",
-  },
-  {
-    cover: "/services/2.webp",
-    title: "Cloud Migration",
-  },
-  {
-    cover: "/services/3.webp",
-    title: "DevOps",
-  },
-  {
-    cover: "/services/4.webp",
-    title: "Data Analytics",
-  },
-  {
-    cover: "/services/5.webp",
-    title: "Cyber Security",
-  },
-  {
-    cover: "/services/6.jpeg",
-    title: "Web Development",
-  },
-  {
-    cover: "/services/7.jpeg",
-    title: "UI/UX Design",
-  },
-  {
-    cover: "/services/8.jpeg",
-    title: "Quality Assurance",
-  },
-  {
-    cover: "/services/9.jpeg",
-    title: "IT Consulting",
-  },
-];
+import { Link } from "react-router-dom";
+import { data, dataProps } from "../data/ServicesData";
 
 const Services = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -161,33 +119,35 @@ export const Card = React.memo(function (props: {
   currentIndex: number;
 }) {
   const { data, dataIndex, currentIndex } = props;
-  const { title, cover } = data[dataIndex];
+  const { id, title, cover } = data[dataIndex];
 
   // Determine if this slide is the active one
   const isActiveSlide = dataIndex === currentIndex;
 
   return (
-    <div
-      className={`bg-white shadow-lg text-center h-full z-10 transform transition-transform duration-500 ease-in-out ${
-        isActiveSlide ? "opacity-100" : "hover:scale-105 bg-[#f0f0f0]"
-      }`}
-    >
-      <img
-        height={1000}
-        width={1000}
-        className={`h-72 w-full object-cover ${
-          isActiveSlide ? "opacity-100" : "opacity-60"
+    <Link to={`/services/${id}`} className="flex flex-col items-center">
+      <div
+        className={`bg-white shadow-lg text-center h-full z-10 transform transition-transform duration-500 ease-in-out ${
+          isActiveSlide ? "opacity-100" : "hover:scale-105 bg-[#f0f0f0]"
         }`}
-        draggable={false}
-        src={`${cover}`}
-      />
-      <div className="p-6">
-        <h1 className="font-bold text-xl">{title}</h1>
-        <p className="text-sm pt-2">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero amet
-          aliquam, praesentium corrupti, quidem accusamus non saepe.
-        </p>
+      >
+        <img
+          height={1000}
+          width={1000}
+          className={`h-72 w-full object-cover ${
+            isActiveSlide ? "opacity-100" : "opacity-60"
+          }`}
+          draggable={false}
+          src={`${cover}`}
+        />
+        <div className="p-6">
+          <h1 className="font-bold text-xl">{title}</h1>
+          <p className="text-sm pt-2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero amet
+            aliquam, praesentium corrupti, quidem accusamus non saepe.
+          </p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 });
