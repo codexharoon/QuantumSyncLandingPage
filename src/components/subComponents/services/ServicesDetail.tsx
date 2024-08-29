@@ -5,6 +5,10 @@ import ContactUs from "../../ContactUs";
 import Advantage from "./Advantage";
 import Benefit1 from "./Benefit1";
 import { useState } from "react";
+import Benefit2 from "./Benefit2";
+import Accelerator from "./Accelerator";
+import Solution from "./Solution";
+import TeamLeadership from "./TeamLeadership";
 
 const ServicesDetail = () => {
   const { id } = useParams();
@@ -63,14 +67,20 @@ const ServicesDetail = () => {
         </div>
       </section>
 
-      {longDesc && (
+      {longDesc?.desc && (
         <div className="flex flex-row-reverse text-lg w-full items-center justify-center bg-gray-100 py-16 xl:px-36 md:px-20 px-8">
-          <span className="flex flex-1 ml-10">{longDesc}</span>
+          <span className="flex flex-1 ml-10">{longDesc.desc}</span>
+          {longDesc.cover && (
+            <img
+              src={`${longDesc.cover}`}
+              className="flex flex-[0] w-full max-w-72 h-auto"
+            />
+          )}
         </div>
       )}
 
       {!!offering?.length && (
-        <section className="w-full items-center justify-center bg-blueWhite py-16 xl:pl-40 md:pl-20 pl-8">
+        <section className="w-full items-center justify-center bg-gray-100 py-16 xl:pl-40 md:pl-20 pl-8">
           <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-start">
             Our Service Offering
           </h1>
@@ -104,14 +114,25 @@ const ServicesDetail = () => {
         </section>
       )}
 
-      {title === "Digital Application Services" && (
+      {title === "Digital Application Services" ||
+        (title === "Quality Engineering Services" && (
+          <>
+            <Advantage />
+            <Benefit1 />
+          </>
+        ))}
+
+      {title === "UI/XM Services" && <Benefit2 />}
+
+      {title === "Enterprise Content Management" && (
         <>
-          <Advantage />
-          <Benefit1 />
+          <Solution />
+          <Accelerator />
         </>
       )}
 
       <Partnership />
+      <TeamLeadership />
       <ContactUs />
     </>
   );
