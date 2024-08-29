@@ -17,7 +17,7 @@ const ServicesDetail = () => {
     (item: dataProps) => item.id === Number(id)
   ) as dataProps;
 
-  const { title, cover, shortDesc, longDesc, offering } = detail;
+  const { title, cover, shortDesc, longDesc, offering, accelerator } = detail;
 
   const [pText, setPText] = useState<string>(offering?.[0].desc ?? "");
   const [active, setActive] = useState<string>(offering?.[0].title ?? "");
@@ -84,8 +84,8 @@ const ServicesDetail = () => {
           <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-start">
             Our Service Offering
           </h1>
-          {/* overflow-y-scroll no-scrollbar */}
-          <div className="flex flex-row overflow-x-auto gap-x-6 pt-12 w-auto   pb-4">
+
+          <div className="flex flex-row overflow-x-auto gap-x-6 pt-12 w-auto overflow-y-scroll no-scrollbar pb-4">
             {offering?.map((item, index) => (
               <div
                 key={index}
@@ -115,6 +115,7 @@ const ServicesDetail = () => {
       )}
 
       {title === "Digital Application Services" ||
+        title === "Digital Atelier" ||
         (title === "Quality Engineering Services" && (
           <>
             <Advantage />
@@ -124,11 +125,16 @@ const ServicesDetail = () => {
 
       {title === "UI/XM Services" && <Benefit2 />}
 
-      {title === "Enterprise Content Management" && (
-        <>
-          <Solution />
-          <Accelerator />
-        </>
+      {title === "Enterprise Content Management" && <Solution />}
+
+      {accelerator && (
+        <Accelerator
+          card1={accelerator.card1}
+          card2={accelerator.card2}
+          card3={accelerator.card3}
+          card4={accelerator.card4}
+          card5={accelerator.card5}
+        />
       )}
 
       <Partnership />
