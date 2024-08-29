@@ -2,17 +2,25 @@ import { useParams } from "react-router-dom";
 import { data, dataProps } from "../../../data/ServicesData";
 import Partnership from "../../Partnership";
 import ContactUs from "../../ContactUs";
+import Advantage from "./Advantage";
+import Benefit1 from "./Benefit1";
+import { useState } from "react";
 
 const ServicesDetail = () => {
   const { id } = useParams();
 
-  if (!id) return;
+  const detail = data.find(
+    (item: dataProps) => item.id === Number(id)
+  ) as dataProps;
 
-  const detail = data.find((item: dataProps) => item.id === Number(id));
+  const { title, cover, shortDesc, longDesc, offering } = detail;
 
-  if (!detail) return <h1>Service not found!</h1>;
+  const [pText, setPText] = useState<string>(offering?.[0].desc ?? "");
+  const [active, setActive] = useState<string>(offering?.[0].title ?? "");
 
-  const { title, cover } = detail;
+  if (!detail)
+    return <h1 className="text-4xl text-center">Service not found!</h1>;
+
   return (
     <>
       <section className="w-full items-center justify-center flex md:flex-row flex-col lg:px-0 px-6 py-16 bg-gray-100 relative">
@@ -29,10 +37,9 @@ const ServicesDetail = () => {
             {title}
           </h1>
 
-          <p className="lg:text-2xl text-xl pt-6 sevenLines">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nisi
-            labore nam inventore et vel libero vero sunt nulla dolorum dolore
-          </p>
+          {shortDesc && (
+            <p className="lg:text-2xl text-xl pt-6 sevenLines">{shortDesc}</p>
+          )}
 
           <a href="" className="w-fit">
             <button
@@ -55,6 +62,54 @@ const ServicesDetail = () => {
           />
         </div>
       </section>
+
+      {longDesc && (
+        <div className="flex flex-row-reverse text-lg w-full items-center justify-center bg-gray-100 py-16 xl:px-36 md:px-20 px-8">
+          <span className="flex flex-1 ml-10">{longDesc}</span>
+        </div>
+      )}
+
+      {!!offering?.length && (
+        <section className="w-full items-center justify-center bg-blueWhite py-16 xl:pl-40 md:pl-20 pl-8">
+          <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-start">
+            Our Service Offering
+          </h1>
+          {/* overflow-y-scroll no-scrollbar */}
+          <div className="flex flex-row overflow-x-auto gap-x-6 pt-12 w-auto   pb-4">
+            {offering?.map((item, index) => (
+              <div
+                key={index}
+                className={`flex whitespace-nowrap border border-black rounded-full gap-x-4 px-4 py-2 outline-none 
+                             ${
+                               item.title === active
+                                 ? "bg-blue-600 text-white"
+                                 : "text-black bg-gray-100"
+                             }`}
+              >
+                <button
+                  className="text-lg font-semibold outline-none uppercase"
+                  onClick={() => {
+                    setPText(item.desc);
+                    setActive(item.title);
+                  }}
+                >
+                  {item.title}
+                </button>
+              </div>
+            ))}
+          </div>
+          <div className="bg-white md:p-8 p-4 mt-8 md:w-[90%] w-[96%]">
+            <p className="md:text-lg text-bases">{pText}</p>
+          </div>
+        </section>
+      )}
+
+      {title === "Digital Application Services" && (
+        <>
+          <Advantage />
+          <Benefit1 />
+        </>
+      )}
 
       <Partnership />
       <ContactUs />
