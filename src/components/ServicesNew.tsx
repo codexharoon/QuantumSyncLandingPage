@@ -119,7 +119,7 @@ export const Card = React.memo(function (props: {
   currentIndex: number;
 }) {
   const { data, dataIndex, currentIndex } = props;
-  const { id, title, cover } = data[dataIndex];
+  const { id, title, cover, shortDesc } = data[dataIndex];
 
   // Determine if this slide is the active one
   const isActiveSlide = dataIndex === currentIndex;
@@ -142,10 +142,7 @@ export const Card = React.memo(function (props: {
         />
         <div className="p-6">
           <h1 className="font-bold text-xl">{title}</h1>
-          <p className="text-sm pt-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero amet
-            aliquam, praesentium corrupti, quidem accusamus non saepe.
-          </p>
+          <p className="text-sm pt-2">{shortDesc}</p>
         </div>
       </div>
     </Link>

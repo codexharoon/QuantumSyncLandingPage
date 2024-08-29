@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { data, dataProps } from "../../../data/ServicesData";
 import Partnership from "../../Partnership";
 import ContactUs from "../../ContactUs";
-import Advantage from "./Advantage";
+import { Card } from "./cards/Advantage";
 import Benefit1 from "./Benefit1";
 import { useState } from "react";
 import Benefit2 from "./Benefit2";
@@ -17,7 +17,15 @@ const ServicesDetail = () => {
     (item: dataProps) => item.id === Number(id)
   ) as dataProps;
 
-  const { title, cover, shortDesc, longDesc, offering, accelerator } = detail;
+  const {
+    title,
+    cover,
+    shortDesc,
+    longDesc,
+    offering,
+    advantage,
+    accelerator,
+  } = detail;
 
   const [pText, setPText] = useState<string>(offering?.[0].desc ?? "");
   const [active, setActive] = useState<string>(offering?.[0].title ?? "");
@@ -114,11 +122,24 @@ const ServicesDetail = () => {
         </section>
       )}
 
+      {advantage && (
+        <section className="w-full bg-gray-100 flex flex-col justify-center md:px-0 px-4 py-20 items-center">
+          <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl sm:text-start w-full xl:pl-36 md:pl-16 sm:pl-10">
+            QuantumSync Advantage
+          </h1>
+
+          <div className="transition-all duration-300 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 xl:w-4/5 w-[90%] max-h-min justify-center pt-16">
+            {advantage.map((item, index) => (
+              <Card key={index} cover={item.cover} title={item.title} />
+            ))}
+          </div>
+        </section>
+      )}
+
       {title === "Digital Application Services" ||
         title === "Digital Atelier" ||
         (title === "Quality Engineering Services" && (
           <>
-            <Advantage />
             <Benefit1 />
           </>
         ))}

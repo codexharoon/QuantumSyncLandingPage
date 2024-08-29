@@ -19,33 +19,94 @@ export type dataProps = {
     desc?: string;
   };
   offering?: offeringProps[];
+  advantage?: {
+    cover: string;
+    title: string;
+    shortDesc?: string;
+  }[];
   accelerator?: {
     card1: acceleratorProps;
-    card2: acceleratorProps;
-    card3: acceleratorProps;
-    card4: acceleratorProps;
-    card5: acceleratorProps;
+    card2?: acceleratorProps;
+    card3?: acceleratorProps;
+    card4?: acceleratorProps;
+    card5?: acceleratorProps;
   };
 };
 
 export const data: dataProps[] = [
   {
     id: 1,
-    cover: "/services/1.webp",
-    title: "Digital Atelier",
+    cover: "/services/8.jpeg",
+    title: "Digital Application Services",
     shortDesc:
-      "Modern applications and products engineered for scalability and robust security",
+      "Modern applications and products engineered for scalability and robust security.",
     longDesc: {
       cover: "",
       desc: "With the recent advancements in technology, the business landscape has dramatically transformed. At QuantumSync, we excel in equipping businesses to effectively navigate these changes, ensuring they stay competitive with cutting-edge and relevant offerings. In an era where customers and stakeholders expect seamless, anytime, anywhere experiences, there is an increasing demand for unique, rigorously tested, and future-proof solutions. QuantumSync is here to assist businesses in adopting a digital-first mindset and accelerating their product engineering processes, which enhances digital engagement and interaction. Digital product engineering is crucial not only for delivering outstanding experiences but also acts as a driving force behind digital transformation within enterprises. It speeds up innovation and the cycles of product development. The shift to remote work during the pandemic, along with the growth in online commerce and consumer behavior, has significantly accelerated investment in this area, making our services more vital than ever.",
     },
     offering: [
       {
-        title: "Digital Atelier",
+        title: "Digital Application Services",
+        desc: "In today’s rapidly evolving digital landscape, organizational agility and efficiency are key, yet often hindered by outdated applications or an application estate that's not optimized for adaptability. Many organizations recognize that streamlining operations and enhancing profitability can be achieved by aligning their applications with their strategic transformation goals. IT plays an essential role in this transformation. At QuantumSync, our digital application services are designed to optimize everyday operations and adapt applications to meet evolving customer demands. Our tailored application management approach, infused with lean methodologies, allows for a high degree of customization and the swift, seamless introduction of new business models. Leveraging our deep industry and technological expertise, we offer scalable and comprehensive digital application services. These include Architecture Planning, Technology Integration, Process Strategy and Evaluation, Application Portfolio Rationalization, Initial Product Development (Product Sprint 0), and both Mobile and Web Development solutions.",
+      },
+      {
+        title: "ui/ux services",
+        desc: "As the number of innovative products and applications continues to rise, UI/UX teams at QuantumSync recognize the need to make a strong impact to stand out from the competition. Prioritizing intuitive, seamless, and consistent user experiences is crucial, and understanding the customer at every stage of their lifecycle—from consideration to evaluation—is key to staying ahead. Investment in customer research and cutting-edge technologies is essential to deliver valuable experiences that surpass customer expectations. At QuantumSync, we offer a comprehensive suite of UI/UX services designed to enhance the usability and accessibility of our clients' products, websites, and applications, ensuring they make a lasting impression. We are committed to delivering immersive and authentic experiences that not only engage users but also foster lasting loyalty.",
+      },
+      {
+        title: "Quality Engineering Services",
+        desc: "Enterprises today rely on software as a critical driver of efficiency and effectiveness, requiring high quality at a rapid pace and large scale amidst ever-changing market trends. This necessitates a focus on quality throughout every stage of the product and application development cycle. At QuantumSync, our quality engineering services are driven by innovation and designed to boost quality, accelerate value delivery, enhance stability, and provide superior customer experiences. Whether you're developing new software or looking to revamp your testing functions and workforce, we deliver top-tier quality at reasonable costs and improved return on investment (ROI). Leveraging years of expertise, our seasoned quality engineers bring unparalleled quality and a diverse set of skills in DevOps, QA, automation, continuous testing, and agile methodologies to our global clientele.",
+      },
+      {
+        title: "Enterprise Content Management",
+        desc: "Enterprise content management (ECM) is foundational to an enterprise's resilience. As the demand for digital content has grown with the expansion of online marketing and customer services, e-commerce industries have significantly driven the adoption of ECM in the market. The knowledge hub of any enterprise serves as a comprehensive repository, capturing everything from project ideation to delivery, customer behavior to satisfaction, and innovations across all teams. ECM plays a crucial role in managing the content lifecycle and organizing enterprise-wide information, from initial capture to final archiving and disposition. At QuantumSync, our dedicated ECM team, based entirely in America, leverages deep domain expertise to collaborate with you in developing a tailored ECM strategy. This strategy is designed to optimize your business operations and meet your specific needs.",
+      },
+      {
+        title: "Digital ALtelier",
         desc: "Digital transformation is more than just a technological upgrade. As technology advances, the number of connected devices increases, user interactions become more dynamic, and consumer expectations rise, businesses need to adapt to a digital-first environment, focusing on their People, Processes, and Products. What QuantumSync Offers: Revamp your digital ecosystem with QuantumSync's Digital Atelier, a unique service designed to spearhead digital transformation. Driven by continuous innovation and refinement, the Digital Atelier provides a collaborative, low-risk environment for digital services. It features service gateways that ensure seamless access to applications through relevant APIs and includes a repository of artifacts that can be replicated, provisioned, and deployed across different groups and regions. By enabling businesses to rely on accurate and consistent data, QuantumSync's Digital Atelier also establishes a robust and adaptable digital governance framework, helping businesses achieve digital maturity and realize their transformation objectives.",
       },
     ],
+    advantage: [
+      {
+        cover: "/advantage/1.svg",
+        title: "End-to-end portfolio of product engineering services",
+      },
+      {
+        cover: "/advantage/2.svg",
+        title: "Modern technologies and reference architectures",
+      },
+      {
+        cover: "/advantage/3.svg",
+        title:
+          "Subject matter experts (SMEs) across various industry domains, technology platforms, and tools",
+      },
+      {
+        cover: "/advantage/4.svg",
+        title:
+          "Reusable assets and in-house developed frameworks to accelerate application development",
+      },
+      {
+        cover: "/advantage/5.svg",
+        title: "Flexible engagement and financial models",
+      },
+      {
+        cover: "/advantage/6.svg",
+        title:
+          "Long-term industry partnerships which help in engineering transformation solutions",
+      },
+      {
+        cover: "/advantage/7.svg",
+        title:
+          "All-inclusive process automation to manage application development",
+      },
+      {
+        cover: "/advantage/8.svg",
+        title:
+          "Governance models to administer the entire application lifecycle",
+      },
+    ],
   },
+
   {
     id: 2,
     cover: "/services/2.webp",
@@ -60,6 +121,45 @@ export const data: dataProps[] = [
       {
         title: "Quality Engineering Services",
         desc: "Enterprises today rely on software as a critical driver of efficiency and effectiveness, requiring high quality at a rapid pace and large scale amidst ever-changing market trends. This necessitates a focus on quality throughout every stage of the product and application development cycle. At QuantumSync, our quality engineering services are driven by innovation and designed to boost quality, accelerate value delivery, enhance stability, and provide superior customer experiences. Whether you're developing new software or looking to revamp your testing functions and workforce, we deliver top-tier quality at reasonable costs and improved return on investment (ROI). Leveraging years of expertise, our seasoned quality engineers bring unparalleled quality and a diverse set of skills in DevOps, QA, automation, continuous testing, and agile methodologies to our global clientele. Innova’s digital application services empower organizations to optimize their day-to-day operations and adapt their applications to support changing customer demands. Our right-fit application management approach combined with lean techniques enables a high degree of customization and helps implement new models rapidly and seamlessly. Drawing from our deep industry and technology expertise, we provide highly scalable and comprehensive digital application services which include Architecture, Technology, Process Strategy and Assessments, Application Portfolio Rationalization, Product Sprint 0, and Mobile and Web Development.",
+      },
+    ],
+    advantage: [
+      {
+        cover: "/advantage/1.svg",
+        title: "End-to-end portfolio of product engineering services",
+      },
+      {
+        cover: "/advantage/2.svg",
+        title: "Modern technologies and reference architectures",
+      },
+      {
+        cover: "/advantage/3.svg",
+        title:
+          "Subject matter experts (SMEs) across various industry domains, technology platforms, and tools",
+      },
+      {
+        cover: "/advantage/4.svg",
+        title:
+          "Reusable assets and in-house developed frameworks to accelerate application development",
+      },
+      {
+        cover: "/advantage/5.svg",
+        title: "Flexible engagement and financial models",
+      },
+      {
+        cover: "/advantage/6.svg",
+        title:
+          "Long-term industry partnerships which help in engineering transformation solutions",
+      },
+      {
+        cover: "/advantage/7.svg",
+        title:
+          "All-inclusive process automation to manage application development",
+      },
+      {
+        cover: "/advantage/8.svg",
+        title:
+          "Governance models to administer the entire application lifecycle",
       },
     ],
   },
@@ -216,34 +316,57 @@ export const data: dataProps[] = [
   },
   {
     id: 8,
-    cover: "/services/8.jpeg",
-    title: "Digital Application Services",
+    cover: "/services/1.webp",
+    title: "Digital Atelier",
     shortDesc:
-      "Modern applications and products engineered for scalability and robust security.",
+      "Modern applications and products engineered for scalability and robust security",
     longDesc: {
       cover: "",
       desc: "With the recent advancements in technology, the business landscape has dramatically transformed. At QuantumSync, we excel in equipping businesses to effectively navigate these changes, ensuring they stay competitive with cutting-edge and relevant offerings. In an era where customers and stakeholders expect seamless, anytime, anywhere experiences, there is an increasing demand for unique, rigorously tested, and future-proof solutions. QuantumSync is here to assist businesses in adopting a digital-first mindset and accelerating their product engineering processes, which enhances digital engagement and interaction. Digital product engineering is crucial not only for delivering outstanding experiences but also acts as a driving force behind digital transformation within enterprises. It speeds up innovation and the cycles of product development. The shift to remote work during the pandemic, along with the growth in online commerce and consumer behavior, has significantly accelerated investment in this area, making our services more vital than ever.",
     },
     offering: [
       {
-        title: "Digital Application Services",
-        desc: "In today’s rapidly evolving digital landscape, organizational agility and efficiency are key, yet often hindered by outdated applications or an application estate that's not optimized for adaptability. Many organizations recognize that streamlining operations and enhancing profitability can be achieved by aligning their applications with their strategic transformation goals. IT plays an essential role in this transformation. At QuantumSync, our digital application services are designed to optimize everyday operations and adapt applications to meet evolving customer demands. Our tailored application management approach, infused with lean methodologies, allows for a high degree of customization and the swift, seamless introduction of new business models. Leveraging our deep industry and technological expertise, we offer scalable and comprehensive digital application services. These include Architecture Planning, Technology Integration, Process Strategy and Evaluation, Application Portfolio Rationalization, Initial Product Development (Product Sprint 0), and both Mobile and Web Development solutions.",
-      },
-      {
-        title: "ui/ux services",
-        desc: "As the number of innovative products and applications continues to rise, UI/UX teams at QuantumSync recognize the need to make a strong impact to stand out from the competition. Prioritizing intuitive, seamless, and consistent user experiences is crucial, and understanding the customer at every stage of their lifecycle—from consideration to evaluation—is key to staying ahead. Investment in customer research and cutting-edge technologies is essential to deliver valuable experiences that surpass customer expectations. At QuantumSync, we offer a comprehensive suite of UI/UX services designed to enhance the usability and accessibility of our clients' products, websites, and applications, ensuring they make a lasting impression. We are committed to delivering immersive and authentic experiences that not only engage users but also foster lasting loyalty.",
-      },
-      {
-        title: "Quality Engineering Services",
-        desc: "Enterprises today rely on software as a critical driver of efficiency and effectiveness, requiring high quality at a rapid pace and large scale amidst ever-changing market trends. This necessitates a focus on quality throughout every stage of the product and application development cycle. At QuantumSync, our quality engineering services are driven by innovation and designed to boost quality, accelerate value delivery, enhance stability, and provide superior customer experiences. Whether you're developing new software or looking to revamp your testing functions and workforce, we deliver top-tier quality at reasonable costs and improved return on investment (ROI). Leveraging years of expertise, our seasoned quality engineers bring unparalleled quality and a diverse set of skills in DevOps, QA, automation, continuous testing, and agile methodologies to our global clientele.",
-      },
-      {
-        title: "Enterprise Content Management",
-        desc: "Enterprise content management (ECM) is foundational to an enterprise's resilience. As the demand for digital content has grown with the expansion of online marketing and customer services, e-commerce industries have significantly driven the adoption of ECM in the market. The knowledge hub of any enterprise serves as a comprehensive repository, capturing everything from project ideation to delivery, customer behavior to satisfaction, and innovations across all teams. ECM plays a crucial role in managing the content lifecycle and organizing enterprise-wide information, from initial capture to final archiving and disposition. At QuantumSync, our dedicated ECM team, based entirely in America, leverages deep domain expertise to collaborate with you in developing a tailored ECM strategy. This strategy is designed to optimize your business operations and meet your specific needs.",
-      },
-      {
-        title: "Digital ALtelier",
+        title: "Digital Atelier",
         desc: "Digital transformation is more than just a technological upgrade. As technology advances, the number of connected devices increases, user interactions become more dynamic, and consumer expectations rise, businesses need to adapt to a digital-first environment, focusing on their People, Processes, and Products. What QuantumSync Offers: Revamp your digital ecosystem with QuantumSync's Digital Atelier, a unique service designed to spearhead digital transformation. Driven by continuous innovation and refinement, the Digital Atelier provides a collaborative, low-risk environment for digital services. It features service gateways that ensure seamless access to applications through relevant APIs and includes a repository of artifacts that can be replicated, provisioned, and deployed across different groups and regions. By enabling businesses to rely on accurate and consistent data, QuantumSync's Digital Atelier also establishes a robust and adaptable digital governance framework, helping businesses achieve digital maturity and realize their transformation objectives.",
+      },
+    ],
+    advantage: [
+      {
+        cover: "/advantage/1.svg",
+        title: "End-to-end portfolio of product engineering services",
+      },
+      {
+        cover: "/advantage/2.svg",
+        title: "Modern technologies and reference architectures",
+      },
+      {
+        cover: "/advantage/3.svg",
+        title:
+          "Subject matter experts (SMEs) across various industry domains, technology platforms, and tools",
+      },
+      {
+        cover: "/advantage/4.svg",
+        title:
+          "Reusable assets and in-house developed frameworks to accelerate application development",
+      },
+      {
+        cover: "/advantage/5.svg",
+        title: "Flexible engagement and financial models",
+      },
+      {
+        cover: "/advantage/6.svg",
+        title:
+          "Long-term industry partnerships which help in engineering transformation solutions",
+      },
+      {
+        cover: "/advantage/7.svg",
+        title:
+          "All-inclusive process automation to manage application development",
+      },
+      {
+        cover: "/advantage/8.svg",
+        title:
+          "Governance models to administer the entire application lifecycle",
       },
     ],
   },
@@ -299,6 +422,77 @@ export const data: dataProps[] = [
       card5: {
         cover: "/acce/d5.webp",
         title: "PHASE 4",
+      },
+    },
+  },
+  {
+    id: 10,
+    cover: "/services/1.webp",
+    title: "Managed Cloud Services",
+    shortDesc: "Enhance the Capabilites of Your Cloud Ecosystem",
+    longDesc: {
+      cover: "",
+      desc: "Organizations must enhance their operational efficiency as they modernize and transition to the cloud. Operations now encompass a complex mix that extends beyond traditional data center applications to include SaaS, platform services, and infrastructure services, both on-premises and in the public cloud. This shift necessitates innovative thinking and a contemporary approach that utilizes declarative configurations, resource orchestration, and APIs for management. It also demands proactive governance, monitoring, cost optimization, advanced tools, and digital labor to support human efforts, ensuring efficiency and scalability. QuantumSync's Modern Managed Services are designed to adeptly manage cloud-based architectures critical to your business applications while you concentrate on enhancing business agility, stability, compliance, and cost control. From cognitive agents to site reliability engineering for your most vital services, we ensure compliance through highly automated monitoring. We also provide comprehensive remediation for your enterprise application portfolio in a hybrid environment, ensuring all bases are covered.",
+    },
+    offering: [
+      {
+        title: "Data Management",
+        desc: "Data is a vital business asset, and if not managed properly, it can burden organizations with inconsistent datasets, data quality problems, and incompatible data silos. Our data modernization services include a comprehensive data management strategy that helps organizations enhance control over their data by ensuring it is well-governed, secure, and effectively managed. We deliver a clear roadmap for cataloging and governing data, implement data quality measures within a robust governance framework, and classify data based on its sensitivity while establishing processes to protect it.",
+      },
+      {
+        title: "Data Migration",
+        desc: "At QuantumSync, we thoroughly assess the current data and data gravity before initiating any data migration project. We also clarify the client’s goals, which can range from data consolidation to the creation of a data lake. Our focus is on the desired outcomes—whether it’s maximizing data value, reducing costs, or enhancing data quality. Our skilled data migration and management team implements processes designed to achieve these objectives while minimizing risk and business impact. To facilitate data migration, we have developed a migration factory tailored to identify the necessary data sets, determine the required integrations and patterns, and establish effective data loading mechanisms. This migration factory is fully integrated with existing processes and service level agreements (SLAs), and can be customized to meet specific client needs and requirements. Equipped with accelerators, frameworks, and templates, our migration factory ensures faster time to market and cost efficiency.",
+      },
+      {
+        title: "Data Visualization",
+        desc: "We utilize agile methodologies to graphically depict information, enhancing communication and understanding. This approach allows organizations to engage with analytics visually, aiding in the clarification of complex concepts and the discovery of new patterns.",
+      },
+      {
+        title: "Data Operations",
+        desc: "Data is a vital business asset, and if not managed properly, it can burden organizations with inconsistent datasets, data quality problems, and incompatible data silos. Our data modernization services include a comprehensive data management strategy that helps organizations enhance control over their data by ensuring it is well-governed, secure, and effectively managed. We deliver a clear roadmap for cataloging and governing data, implement data quality measures within a robust governance framework, and classify data based on its sensitivity while establishing processes to protect it.",
+      },
+      {
+        title: "Data Enablement",
+        desc: "At QuantumSync, we thoroughly assess the current data and data gravity before initiating any data migration project. We also clarify the client’s goals, which can range from data consolidation to the creation of a data lake. Our focus is on the desired outcomes—whether it’s maximizing data value, reducing costs, or enhancing data quality. Our skilled data migration and management team implements processes designed to achieve these objectives while minimizing risk and business impact. To facilitate data migration, we have developed a migration factory tailored to identify the necessary data sets, determine the required integrations and patterns, and establish effective data loading mechanisms. This migration factory is fully integrated with existing processes and service level agreements (SLAs), and can be customized to meet specific client needs and requirements. Equipped with accelerators, frameworks, and templates, our migration factory ensures faster time to market and cost efficiency.",
+      },
+    ],
+    accelerator: {
+      card1: {
+        cover: "/acce/managed.webp",
+        title: "Our Methodology",
+        desc: "Our cloud experts possess a deep understanding of our clients' resources, operations, requirements, and financial objectives. We leverage this insight, along with our technical acumen and cloud management skills, to develop an optimized cloud environment tailored to each client. During this process, we provide clients with a roadmap that facilitates the integration of tools, addresses technological gaps, transfers essential knowledge, and streamlines the management of both existing and new workloads. Our approach is centered on continuous improvement and evolution, ensuring the agility and scalability necessary for your business to thrive and expand.",
+      },
+    },
+  },
+  {
+    id: 11,
+    cover: "/services/4.webp",
+    title: "Cloud Edge IoT",
+    shortDesc:
+      "Enhance efficiency at lower costs and increase added value with IoT solutions",
+    longDesc: {
+      cover: "",
+      desc: "The Internet of Things (IoT) enables the connection of machines in semi-automated ways that fundamentally differ from human-reliant networks. Notably, a machine doesn't need to possess advanced intelligence or decision-making capabilities to be integrated into an IoT network. For example, a basic LED bulb that can be remotely controlled via a short-range radio signal is considered part of an IoT network, highlighting the difference between mere connectivity and device intelligence. Globally, businesses are tapping into the immense potential of IoT to gain a deeper understanding of opportunities and better align with their goals. Leveraging our expertise in cloud IoT-powered solutions, we can help your business: • Connect devices efficiently and scale effortlessly • Strategically analyze new data to generate actionable business insights • Make smart decisions based on data • Integrate and transform business processes • Design, build, deploy, and manage comprehensive IoT-backed processes • Provide high-quality user interfaces (UI) that connect to the human world",
+    },
+    offering: [
+      {
+        title: "IOT for Industry",
+        desc: "Data is a vital business asset, and if not managed properly, it can burden organizations with inconsistent datasets, data quality problems, and incompatible data silos. Our data modernization services include a comprehensive data management strategy that helps organizations enhance control over their data by ensuring it is well-governed, secure, and effectively managed. We deliver a clear roadmap for cataloging and governing data, implement data quality measures within a robust governance framework, and classify data based on its sensitivity while establishing processes to protect it.",
+      },
+      {
+        title: "IOT for Products",
+        desc: "At QuantumSync, we thoroughly assess the current data and data gravity before initiating any data migration project. We also clarify the client’s goals, which can range from data consolidation to the creation of a data lake. Our focus is on the desired outcomes—whether it’s maximizing data value, reducing costs, or enhancing data quality. Our skilled data migration and management team implements processes designed to achieve these objectives while minimizing risk and business impact. To facilitate data migration, we have developed a migration factory tailored to identify the necessary data sets, determine the required integrations and patterns, and establish effective data loading mechanisms. This migration factory is fully integrated with existing processes and service level agreements (SLAs), and can be customized to meet specific client needs and requirements. Equipped with accelerators, frameworks, and templates, our migration factory ensures faster time to market and cost efficiency.",
+      },
+      {
+        title: "IOT Platform",
+        desc: "We utilize agile methodologies to graphically depict information, enhancing communication and understanding. This approach allows organizations to engage with analytics visually, aiding in the clarification of complex concepts and the discovery of new patterns.",
+      },
+    ],
+    accelerator: {
+      card1: {
+        cover: "/acce/iot.webp",
+        title: "Our Approach",
+        desc: "We conduct a thorough mapping to assist organizations in navigating the following edge configuration parameters, which are critical for making informed decisions and identifying gaps within specific layers of the IoT architecture: Latency Understanding the latency requirements, ranging from <10ms to over 1000ms, helps us determine the type of implementation necessary. Location Details about the physical location or installation site of the IoT device. Analytics The specific type of analytics needed, such as near real-time analytics or machine learning, to enable timely actions by users. Dashboard On/Offline Support The connectivity requirements necessary for the project to function effectively. Data Management Insight into the volume of data being generated and how it is being utilized. Remote Management Ensuring all devices operate uniformly with similar firmware updates to consistently report back status. Device Management Enabling remote interaction with and visualization of your IoT devices. Deployment, Security, Compliance Enhancing the security of Edge Gateways, Data, and IoT devices with IAM policies, IoT certificates, and comprehensive IoT policies.",
       },
     },
   },
