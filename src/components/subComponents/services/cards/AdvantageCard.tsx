@@ -1,10 +1,10 @@
-interface CardProps {
+export interface AdvantageCardProps {
   cover: string;
   title: string;
   shortDesc?: string;
 }
 
-export function Card({ cover, title }: CardProps) {
+export function AdvantageCard({ cover, title }: AdvantageCardProps) {
   return (
     <div className="bg-white group group-hover:border-2 group-hover:border-blue group-hover:shadow-xl max-h-96 duration-300 hover:max-h-full text-myBlack px-4 py-6 flex flex-col items-center text-center">
       <img

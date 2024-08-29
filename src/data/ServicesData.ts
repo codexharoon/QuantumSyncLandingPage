@@ -1,3 +1,7 @@
+import { AdvantageCardProps } from "../components/subComponents/services/cards/AdvantageCard";
+import { BenefitCardProps } from "../components/subComponents/services/cards/BenefitCard";
+import { SolutionCardProps } from "../components/subComponents/services/cards/SolutionCard";
+
 type offeringProps = {
   title: string;
   desc: string;
@@ -19,11 +23,8 @@ export type dataProps = {
     desc?: string;
   };
   offering?: offeringProps[];
-  advantage?: {
-    cover: string;
-    title: string;
-    shortDesc?: string;
-  }[];
+  advantages?: AdvantageCardProps[];
+  benefits?: BenefitCardProps[];
   accelerator?: {
     card1: acceleratorProps;
     card2?: acceleratorProps;
@@ -31,6 +32,7 @@ export type dataProps = {
     card4?: acceleratorProps;
     card5?: acceleratorProps;
   };
+  solutions?: SolutionCardProps[];
 };
 
 export const data: dataProps[] = [
@@ -66,7 +68,7 @@ export const data: dataProps[] = [
         desc: "Digital transformation is more than just a technological upgrade. As technology advances, the number of connected devices increases, user interactions become more dynamic, and consumer expectations rise, businesses need to adapt to a digital-first environment, focusing on their People, Processes, and Products. What QuantumSync Offers: Revamp your digital ecosystem with QuantumSync's Digital Atelier, a unique service designed to spearhead digital transformation. Driven by continuous innovation and refinement, the Digital Atelier provides a collaborative, low-risk environment for digital services. It features service gateways that ensure seamless access to applications through relevant APIs and includes a repository of artifacts that can be replicated, provisioned, and deployed across different groups and regions. By enabling businesses to rely on accurate and consistent data, QuantumSync's Digital Atelier also establishes a robust and adaptable digital governance framework, helping businesses achieve digital maturity and realize their transformation objectives.",
       },
     ],
-    advantage: [
+    advantages: [
       {
         cover: "/advantage/1.svg",
         title: "End-to-end portfolio of product engineering services",
@@ -103,6 +105,29 @@ export const data: dataProps[] = [
         cover: "/advantage/8.svg",
         title:
           "Governance models to administer the entire application lifecycle",
+      },
+    ],
+    benefits: [
+      {
+        cover: "/benefit1/1.svg",
+        title:
+          "Enhanced digital experiences for your customers across touchpoints",
+      },
+      {
+        cover: "/benefit1/2.svg",
+        title: "Increased operational efficiency and reduced costs",
+      },
+      {
+        cover: "/benefit1/3.svg",
+        title: "Improved business agility and faster time-to-market",
+      },
+      {
+        cover: "/benefit1/4.svg",
+        title: "Enhanced security and compliance",
+      },
+      {
+        cover: "/benefit1/5.svg",
+        title: "Improved customer engagement and satisfaction",
       },
     ],
   },
@@ -123,7 +148,7 @@ export const data: dataProps[] = [
         desc: "Enterprises today rely on software as a critical driver of efficiency and effectiveness, requiring high quality at a rapid pace and large scale amidst ever-changing market trends. This necessitates a focus on quality throughout every stage of the product and application development cycle. At QuantumSync, our quality engineering services are driven by innovation and designed to boost quality, accelerate value delivery, enhance stability, and provide superior customer experiences. Whether you're developing new software or looking to revamp your testing functions and workforce, we deliver top-tier quality at reasonable costs and improved return on investment (ROI). Leveraging years of expertise, our seasoned quality engineers bring unparalleled quality and a diverse set of skills in DevOps, QA, automation, continuous testing, and agile methodologies to our global clientele. Innova’s digital application services empower organizations to optimize their day-to-day operations and adapt their applications to support changing customer demands. Our right-fit application management approach combined with lean techniques enables a high degree of customization and helps implement new models rapidly and seamlessly. Drawing from our deep industry and technology expertise, we provide highly scalable and comprehensive digital application services which include Architecture, Technology, Process Strategy and Assessments, Application Portfolio Rationalization, Product Sprint 0, and Mobile and Web Development.",
       },
     ],
-    advantage: [
+    advantages: [
       {
         cover: "/advantage/1.svg",
         title: "End-to-end portfolio of product engineering services",
@@ -162,6 +187,29 @@ export const data: dataProps[] = [
           "Governance models to administer the entire application lifecycle",
       },
     ],
+    benefits: [
+      {
+        cover: "/benefit1/1.svg",
+        title:
+          "Enhanced digital experiences for your customers across touchpoints",
+      },
+      {
+        cover: "/benefit1/2.svg",
+        title: "Increased operational efficiency and reduced costs",
+      },
+      {
+        cover: "/benefit1/3.svg",
+        title: "Improved business agility and faster time-to-market",
+      },
+      {
+        cover: "/benefit1/4.svg",
+        title: "Enhanced security and compliance",
+      },
+      {
+        cover: "/benefit1/5.svg",
+        title: "Improved customer engagement and satisfaction",
+      },
+    ],
   },
   {
     id: 3,
@@ -173,6 +221,38 @@ export const data: dataProps[] = [
       cover: "/longDesc/enter.webp",
       desc: "Enterprise content management (ECM) is foundational to an enterprise's resilience. As the demand for digital content has grown with the expansion of online marketing and customer services, e-commerce industries have significantly driven the adoption of ECM in the market. The knowledge hub of any enterprise serves as a comprehensive repository, capturing everything from project ideation to delivery, customer behavior to satisfaction, and innovations across all teams. ECM plays a crucial role in managing the content lifecycle and organizing enterprise-wide information, from initial capture to final archiving and disposition. At QuantumSync, our dedicated ECM team, based entirely in America, leverages deep domain expertise to collaborate with you in developing a tailored ECM strategy. This strategy is designed to optimize your business operations and meet your specific needs.",
     },
+    solutions: [
+      {
+        cover: "/acce/1.svg",
+        title: "Data Capture and Imaging",
+        desc: "Streamline the capture and extract important information in one secure system",
+      },
+      {
+        cover: "/acce/2.svg",
+        title: "Data Entry and Processing",
+        desc: "Automate data entry and processing to improve accuracy and efficiency",
+      },
+      {
+        cover: "/acce/3.svg",
+        title: "Data Extraction and Validation",
+        desc: "Extract and validate data from various sources to ensure data quality",
+      },
+      {
+        cover: "/acce/4.svg",
+        title: "Data Integration and Transformation",
+        desc: "Integrate and transform data to make it accessible and usable",
+      },
+      {
+        cover: "/acce/5.svg",
+        title: "Data Analysis and Reporting",
+        desc: "Analyze data and generate reports to make informed decisions",
+      },
+      {
+        cover: "/acce/4.svg",
+        title: "Data Storage and Management",
+        desc: "Store and manage data securely to ensure data integrity",
+      },
+    ],
     accelerator: {
       card1: {
         cover: "/acce/1.svg",
@@ -313,6 +393,25 @@ export const data: dataProps[] = [
         desc: "We recognize that customers are central to all businesses, making it essential to understand their perceptions and feelings about a product. Our approach begins by assisting enterprises in identifying specific areas where they seek deeper insights. We then gather feedback from users who have extensively interacted with the product or application. In the final stage, we conduct a thorough analysis of the feedback collected. Our analysis focuses on three key metrics: usability, engagement, and conversion. This structured feedback process ensures that businesses can make informed decisions to enhance their offerings and better meet customer needs.",
       },
     ],
+    benefits: [
+      {
+        cover: "/benefit2/1.svg",
+        title:
+          "Enhanced digital experiences for your customers across touchpoints",
+      },
+      {
+        cover: "/benefit2/2.svg",
+        title: "Increased operational efficiency and reduced costs",
+      },
+      {
+        cover: "/benefit2/3.svg",
+        title: "Improved business agility and faster time-to-market",
+      },
+      {
+        cover: "/benefit2/4.svg",
+        title: "Enhanced security and compliance",
+      },
+    ],
   },
   {
     id: 8,
@@ -330,7 +429,7 @@ export const data: dataProps[] = [
         desc: "Digital transformation is more than just a technological upgrade. As technology advances, the number of connected devices increases, user interactions become more dynamic, and consumer expectations rise, businesses need to adapt to a digital-first environment, focusing on their People, Processes, and Products. What QuantumSync Offers: Revamp your digital ecosystem with QuantumSync's Digital Atelier, a unique service designed to spearhead digital transformation. Driven by continuous innovation and refinement, the Digital Atelier provides a collaborative, low-risk environment for digital services. It features service gateways that ensure seamless access to applications through relevant APIs and includes a repository of artifacts that can be replicated, provisioned, and deployed across different groups and regions. By enabling businesses to rely on accurate and consistent data, QuantumSync's Digital Atelier also establishes a robust and adaptable digital governance framework, helping businesses achieve digital maturity and realize their transformation objectives.",
       },
     ],
-    advantage: [
+    advantages: [
       {
         cover: "/advantage/1.svg",
         title: "End-to-end portfolio of product engineering services",
@@ -367,6 +466,29 @@ export const data: dataProps[] = [
         cover: "/advantage/8.svg",
         title:
           "Governance models to administer the entire application lifecycle",
+      },
+    ],
+    benefits: [
+      {
+        cover: "/benefit1/1.svg",
+        title:
+          "Enhanced digital experiences for your customers across touchpoints",
+      },
+      {
+        cover: "/benefit1/2.svg",
+        title: "Increased operational efficiency and reduced costs",
+      },
+      {
+        cover: "/benefit1/3.svg",
+        title: "Improved business agility and faster time-to-market",
+      },
+      {
+        cover: "/benefit1/4.svg",
+        title: "Enhanced security and compliance",
+      },
+      {
+        cover: "/benefit1/5.svg",
+        title: "Improved customer engagement and satisfaction",
       },
     ],
   },

@@ -2,12 +2,11 @@ import { useParams } from "react-router-dom";
 import { data, dataProps } from "../../../data/ServicesData";
 import Partnership from "../../Partnership";
 import ContactUs from "../../ContactUs";
-import { Card } from "./cards/Advantage";
-import Benefit1 from "./Benefit1";
+import { AdvantageCard } from "./cards/AdvantageCard";
+import { BenefitCard } from "./cards/BenefitCard";
 import { useState } from "react";
-import Benefit2 from "./Benefit2";
 import Accelerator from "./Accelerator";
-import Solution from "./Solution";
+import { SolutionCard } from "./cards/SolutionCard";
 import TeamLeadership from "./TeamLeadership";
 
 const ServicesDetail = () => {
@@ -23,7 +22,9 @@ const ServicesDetail = () => {
     shortDesc,
     longDesc,
     offering,
-    advantage,
+    advantages,
+    benefits,
+    solutions,
     accelerator,
   } = detail;
 
@@ -122,31 +123,56 @@ const ServicesDetail = () => {
         </section>
       )}
 
-      {advantage && (
+      {advantages && (
         <section className="w-full bg-gray-100 flex flex-col justify-center md:px-0 px-4 py-20 items-center">
           <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl sm:text-start w-full xl:pl-36 md:pl-16 sm:pl-10">
             QuantumSync Advantage
           </h1>
 
           <div className="transition-all duration-300 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 xl:w-4/5 w-[90%] max-h-min justify-center pt-16">
-            {advantage.map((item, index) => (
-              <Card key={index} cover={item.cover} title={item.title} />
+            {advantages.map((item, index) => (
+              <AdvantageCard
+                key={index}
+                cover={item.cover}
+                title={item.title}
+              />
             ))}
           </div>
         </section>
       )}
 
-      {title === "Digital Application Services" ||
-        title === "Digital Atelier" ||
-        (title === "Quality Engineering Services" && (
-          <>
-            <Benefit1 />
-          </>
-        ))}
+      {benefits && (
+        <section className="w-full flex flex-col items-center justify-center sm:pt-28 pt-12 sm:pb-14 pb-10 lg:px-0 px-6 relative">
+          <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-start">
+            How You Benefit
+          </h1>
 
-      {title === "UI/XM Services" && <Benefit2 />}
+          <div className="flex flex-wrap flex-row xl:w-[96%] w-[90%] gap-6 justify-center pt-16">
+            {benefits.map((item, index) => (
+              <BenefitCard key={index} cover={item.cover} title={item.title} />
+            ))}
+          </div>
+        </section>
+      )}
 
-      {title === "Enterprise Content Management" && <Solution />}
+      {solutions && (
+        <div className="w-full items-center justify-center bg-gray-100 py-16 xl:px-36 md:px-20 px-8">
+          <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-start">
+            Our Solutions
+          </h1>
+
+          <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-3 grid-cols-2 sm:gap-6 gap-4 pt-14 w-full">
+            {solutions.map((item, index) => (
+              <SolutionCard
+                key={index}
+                cover={item.cover}
+                title={item.title}
+                desc={item.desc}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       {accelerator && (
         <Accelerator
