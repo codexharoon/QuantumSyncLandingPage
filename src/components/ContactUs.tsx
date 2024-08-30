@@ -135,7 +135,7 @@ const ContactUs = () => {
           </div>
           <div className="mt-6">
             <ReCAPTCHA
-              sitekey="6Le6yiUqAAAAABWLEP6T9TFJTsD4Z1HeLWULmLwP"
+              sitekey={import.meta.env.VITE_GOOGLE_RECAPTCHA_SITE_KEY as string}
               onChange={handleRecaptchaChange}
             />
           </div>
