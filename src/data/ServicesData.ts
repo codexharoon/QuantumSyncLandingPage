@@ -343,6 +343,31 @@ export const data: dataProps[] = [
   },
   {
     id: 6,
+    cover: "/services/10.webp",
+    title: "AI/ML",
+    shortDesc:
+      "Enables enterprises to strategically ascend the automation maturity curve with precision, predictability, and measurable progress",
+    longDesc: {
+      cover: "",
+      desc: "As global enterprises advance, they are integrating artificial intelligence (AI) and automation across various domains, spanning from robotic process automation to generative AI and machine learning. This integrated strategy is proving invaluable in overcoming constraints related to data, skills, and operations by translating insights into tailored recommendations aligned with evolving training needs and business goals. Forward-thinking business leaders are harnessing the power of AI and automation to cultivate talent and foster innovation. With ongoing advancements in AI and automation, team competencies will be future-proofed, while business transformation processes will accelerate and gain sustainability.",
+    },
+    offering: [
+      {
+        title: "Supervised Learning",
+        desc: "• Linear Regression • Decision Tree • Random Forest • Logistic Regression Our areas of expertise include: • Fraud Detection • Market Segmentation • Customer Segmentation • Pattern or Face Recognition • Image Classification • Marketing Forecasting • Advertising Popularity Predictions",
+      },
+      {
+        title: "Unsupervised Learning",
+        desc: "• K-means clustering • Hierarchical clustering • Gaussian mixture model Our areas of expertise include: • Recommendation system • Customer segmentation • Spam Filtering • News Classification • Social Network Analysis • Search Result Grouping • Image Segmentation • Anomaly Detection • Big Data Visualization • Feature Elicitation • Email Classification",
+      },
+      {
+        title: "AI/ML ENGINEERING OPS",
+        desc: "We utilize agile methodologies to graphically depict information, enhancing communication and understanding. This approach allows organizations to engage with analytics visually, aiding in the clarification of complex concepts and the discovery of new patterns.",
+      },
+    ],
+  },
+  {
+    id: 7,
     cover: "/services/6.jpeg",
     title: "Hyperautomation",
     shortDesc:
@@ -367,7 +392,7 @@ export const data: dataProps[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     cover: "/services/9.jpeg",
     title: "UI/XM Services",
     shortDesc: "Personalizing User Experiences for Greater Relevance",
@@ -414,7 +439,7 @@ export const data: dataProps[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     cover: "/services/1.webp",
     title: "Digital Atelier",
     shortDesc:
@@ -493,7 +518,7 @@ export const data: dataProps[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     cover: "/services/7.jpeg",
     title: "Data Modernization",
     shortDesc:
@@ -548,7 +573,7 @@ export const data: dataProps[] = [
     },
   },
   {
-    id: 10,
+    id: 11,
     cover: "/services/1.webp",
     title: "Managed Cloud Services",
     shortDesc: "Enhance the Capabilites of Your Cloud Ecosystem",
@@ -587,7 +612,7 @@ export const data: dataProps[] = [
     },
   },
   {
-    id: 11,
+    id: 12,
     cover: "/services/4.webp",
     title: "Cloud Edge IoT",
     shortDesc:
@@ -615,6 +640,71 @@ export const data: dataProps[] = [
         cover: "/acce/iot.webp",
         title: "Our Approach",
         desc: "We conduct a thorough mapping to assist organizations in navigating the following edge configuration parameters, which are critical for making informed decisions and identifying gaps within specific layers of the IoT architecture: Latency Understanding the latency requirements, ranging from <10ms to over 1000ms, helps us determine the type of implementation necessary. Location Details about the physical location or installation site of the IoT device. Analytics The specific type of analytics needed, such as near real-time analytics or machine learning, to enable timely actions by users. Dashboard On/Offline Support The connectivity requirements necessary for the project to function effectively. Data Management Insight into the volume of data being generated and how it is being utilized. Remote Management Ensuring all devices operate uniformly with similar firmware updates to consistently report back status. Device Management Enabling remote interaction with and visualization of your IoT devices. Deployment, Security, Compliance Enhancing the security of Edge Gateways, Data, and IoT devices with IAM policies, IoT certificates, and comprehensive IoT policies.",
+      },
+    },
+  },
+  {
+    id: 13,
+    cover: "/services/10.webp",
+    title: "Data Science",
+    shortDesc:
+      "Utilize Data Science to make intelligent, precise, and data-driven decisions",
+    longDesc: {
+      cover: "",
+      desc: "With the advancement of AI and automation, enterprises are reshaping their IT strategies to leverage data for a competitive edge. Through Data Science, businesses gain the ability to comprehend complex phenomena through automated data analysis, leading to better decision-making, increased efficiency, improved productivity, enhanced user engagement, and greater profitability. At QuantumSync, our data scientists and data professionals deliver advanced data solutions that break down complex services into user-friendly components. This significantly enhances your company's data capabilities, enabling enterprises to make effective, intelligent, data-driven business decisions.",
+    },
+    offering: [
+      {
+        title: "Supervised Learning",
+        desc: "• Linear Regression • Decision Tree • Random Forest • Logistic Regression Our areas of expertise include: • Fraud Detection • Market Segmentation • Customer Segmentation • Pattern or Face Recognition • Image Classification • Marketing Forecasting • Advertising Popularity Predictions",
+      },
+      {
+        title: "Unsupervised Learning",
+        desc: "• K-means clustering • Hierarchical clustering • Gaussian mixture model Our areas of expertise include: • Recommendation system • Customer segmentation • Spam Filtering • News Classification • Social Network Analysis • Search Result Grouping • Image Segmentation • Anomaly Detection • Big Data Visualization • Feature Elicitation • Email Classification",
+      },
+      {
+        title: "AI/ML ENGINEERING OPS",
+        desc: "We utilize agile methodologies to graphically depict information, enhancing communication and understanding. This approach allows organizations to engage with analytics visually, aiding in the clarification of complex concepts and the discovery of new patterns.",
+      },
+      {
+        title: "PREDICTIVE LEARNING",
+        desc: "Predictive intelligence is an innovative solution powered by machine learning that synthesizes all relevant data to forecast outcomes and identify key factors influencing organizational performance. It aggregates real-time data from diverse sources within the organization, enabling the anticipation of market shifts, identification of overlooked assumptions, or prediction of future results crucial for making informed, comprehensive business decisions. The adoption of predictive intelligence is swiftly expanding across various industries worldwide, reflecting its growing importance and effectiveness.",
+      },
+      {
+        title: "iDSP",
+        desc: "Organizations worldwide are astounded by the rapid growth of data. Businesses are inundated with diverse data from numerous sources, both internal and external, including devices, real-time sensors, mobile apps, and IoT. However, as unstructured data continues to grow exponentially, companies find themselves overwhelmed by vast amounts of data and face challenges in extracting valuable insights that could inform their decision-making and strategic planning.",
+      },
+    ],
+  },
+  {
+    id: 14,
+    cover: "/services/6.jpeg",
+    title: "Cloud Strategy",
+    shortDesc: "Strategically designed for business success",
+    longDesc: {
+      cover: "",
+      desc: "Today, 94% of companies are adopting cloud computing to quickly bring solutions to market for their essential applications and workflows. Yet, without a well-defined strategy and roadmap, transitioning to the cloud can be costly. Our method outlines key steps for creating a strong cloud adoption strategy:",
+    },
+    accelerator: {
+      card1: {
+        cover: "/acce/c1.webp",
+        title: "Phase 1: Cloud Vision",
+        desc: "Across IT infrastructure and customer satisfaction realms, our AI-powered solutions streamline operations, boost effectiveness, and open pathways to fresh business opportunities. Our services include: GenAI for IT, GenAI for Business and GenAI for Customers.",
+      },
+      card2: {
+        cover: "/acce/c2.webp",
+        title: "Phase 2: Cloud Value Assessment",
+        desc: "Our AI/ML services facilitate the seamless development, deployment, and administration of AI models, empowering businesses to leverage data-driven insights and expedite innovation. Our services include: MLOps, Model Engineering, Enterprise AI.",
+      },
+      card3: {
+        cover: "/acce/c3.webp",
+        title: "Phase 3: Cloud Roadmap",
+        desc: "Empowering businesses with hyper-automation services to optimize processes, boost efficiency, and fuel innovation through the automation of repetitive tasks, streamlining workflows, and harnessing data-driven insights. Our services include: Digital Process Management, Business Process Management, Intelligent Automation, iDSP.",
+      },
+      card4: {
+        cover: "/acce/c4.webp",
+        title: "Phase 4: Cloud Transformation Plan",
+        desc: "Across IT infrastructure and customer satisfaction realms, our AI-powered solutions streamline operations, boost effectiveness, and open pathways to fresh business opportunities. Our services include: GenAI for IT, GenAI for Business and GenAI for Customers.",
       },
     },
   },
